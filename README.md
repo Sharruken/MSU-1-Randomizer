@@ -12,5 +12,6 @@ This is a randomizer to be used with any and all MSU-1 patched SNES games.
 
 # Converter Usage
 
-1. Place any .FLAC, .OGG, .WAV, .MP3 and .MP4 files in the Music folder
-2. Run Converter.py to convert all songs to PCM, which are usable with MSU-1, copy PCM files to the Music folder in the same directory as the MSU-1 Randomizer
+1. Place any MP3s or MP4s into a folder named MP3s
+2. Place any .FLAC, .OGG and .WAV files in the Music folder
+3. Run Converter.py to convert all songs to PCM, which are usable with MSU-1, copy PCM files to the Music folder in the same directory as the MSU-1 Randomizer
