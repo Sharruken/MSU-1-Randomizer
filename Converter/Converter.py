@@ -9,7 +9,7 @@ under_score = ['(',')','[',']']
 dot = [' ']
 root = os.curdir
 
-subprocess.call("FFMPEGConvert.bat")
+subprocess.call('FFMPEG.exe FOR /F "tokens=*" %G IN ("dir Music /b *.mp*") DO ffmpeg -i "MP3s\%G" -c:a libvorbis -q:a 4 "Music\%~nG.ogg"')
 
 os.chdir("Music")
 for f in Music:
