@@ -1,1 +1,0 @@
-FOR /F "tokens=*" %%G IN ('dir Music /b *.mp*') DO ffmpeg -i "MP3s\%%G" -c:a libvorbis -q:a 4 "Music\%%~nG.ogg"
