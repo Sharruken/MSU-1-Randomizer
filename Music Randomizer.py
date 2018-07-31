@@ -29,7 +29,7 @@ for dir in os.listdir(os.curdir):
     if os.path.exists(outputFolder):
         shutil.rmtree(outputFolder)
 #Create the output folder
-os.makedirs("OutPut")
+os.makedirs("Output")
 
 
 # Read the files in the directory
@@ -66,7 +66,7 @@ for root, dirs, files in os.walk(inputFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(file + " -> " + rom[0]+"-"+name+ "\r\n")
+                    f.write(rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
