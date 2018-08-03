@@ -25,7 +25,7 @@ field_file.close()
 event_file = open(eventcfg)
 event_names = list(line.rstrip('\n') for line in event_file.readlines())
 event_file.close()
-boss_file = open(eventcfg)
+boss_file = open(bosscfg)
 boss_names = list(line.rstrip('\n') for line in boss_file.readlines())
 boss_file.close()
 
@@ -87,7 +87,7 @@ for root, dirs, files in os.walk(charFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "-Character" + "\r\n")
+                    f.write("Character Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
@@ -126,7 +126,7 @@ for root, dirs, files in os.walk(battleFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "-Battle"  + "\r\n")
+                    f.write("Battle Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
@@ -165,7 +165,7 @@ for root, dirs, files in os.walk(fieldFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "-Field"  + "\r\n")
+                    f.write("Field Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
@@ -204,7 +204,7 @@ for root, dirs, files in os.walk(eventFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "-Event"  + "\r\n")
+                    f.write("Event Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
@@ -243,7 +243,7 @@ for root, dirs, files in os.walk(bossFolder):
                 print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
                 f = open("Output.txt", "a+")
                 for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "-Boss"  + "\r\n")
+                    f.write("Boss Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
                 f.close()
                 os.rename(file, rom[0]+"-"+name)
                 msu = open(rom[0]+'.msu', 'w')
