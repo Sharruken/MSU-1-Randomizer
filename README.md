@@ -9,9 +9,3 @@ This is a randomizer to be used with any and all MSU-1 patched SNES games.
 3. Follow the instructions in the prompt
 4. If needed, patch the ROM in the Output folder with the relevant patch from the Patches folder (this is still being expanded)
 5. Run your ROM with Retroarch's Snes9x Core, or the latest version of Snes9x (if requested, I'll gather files for the few other emulators that work for MSU-1 and the SD2SNES files)
-
-# Converter Usage
-
-1. Place any MP3s or MP4s into a folder named MP3s
-2. Place any .FLAC, .OGG and .WAV files in the Music folder
-3. Run Converter.py to convert all songs to PCM, which are usable with MSU-1, copy PCM files to the Music folder in the same directory as the MSU-1 Randomizer
