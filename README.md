@@ -12,5 +12,5 @@ This is a randomizer to be used with any and all MSU-1 patched SNES games.
 
 # MSU-1 Randomizer Categories
 
-Currently, this only works for Final Fantasy VI, and still needs to be combined with the main randomizer.
-To use this, it's very similar to Music Randomizer.py, but you'll be asked to provide additional configuration text files, and will draw from subdirectories in the Music folder, these Subdirectories are Battle, Event, Field, Character and Boss, allowing more customization of what music shows up where
+Currently, this only works for Final Fantasy VI.
+To use this you'll be asked to provide additional configuration text files, and will draw from subdirectories in the Music Categories Music folder, these Subdirectories are Battle, Event, Field, Character and Boss, allowing more customization of what music shows up where
