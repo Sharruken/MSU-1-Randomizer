@@ -5,13 +5,14 @@ import shutil
 import ntpath
 
 # Reads the Filenames list
-musiccfg = raw_input ("Please drag your MSU-1 configuration text file into this window: ").strip('\"')
 rompath = raw_input ("Please drag your ROM into this window: ").strip('\"')
 rombase = ntpath.basename(rompath)
 rom = os.path.splitext(rombase)
-names_file = open(musiccfg)
-names = list(line.rstrip('\n') for line in names_file.readlines())
-names_file.close()
+rType = input ("Please select what type of Randomizer you would like:\n"
+                   "1. Categorized\n"
+                   "2. Chaos\n")
+
+
 # Set the root path
 root = os.curdir
 
@@ -30,48 +31,277 @@ for dir in os.listdir(os.curdir):
         shutil.rmtree(outputFolder)
 #Create the output folder
 os.makedirs("Output")
+shutil.copy(rompath, outputFolder)
 
+if rType == 1:
+    battlecfg = raw_input ("Please drag your MSU-1 Battle configuration text file into this window: ").strip('\"')
+    battle_file = open(battlecfg)
+    battle_names = list(line.rstrip('\n') for line in battle_file.readlines())
+    battle_file.close()
+    bosscfg = raw_input ("Please drag your MSU-1 Boss configuration text file into this window: ").strip('\"')
+    boss_file = open(bosscfg)
+    boss_names = list(line.rstrip('\n') for line in boss_file.readlines())
+    boss_file.close()
+    charcfg = raw_input ("Please drag your MSU-1 Character configuration text file into this window: ").strip('\"')
+    char_file = open(charcfg)
+    char_names = list(line.rstrip('\n') for line in char_file.readlines())
+    char_file.close()
+    eventcfg = raw_input ("Please drag your MSU-1 Event configuration text file into this window: ").strip('\"')
+    event_file = open(eventcfg)
+    event_names = list(line.rstrip('\n') for line in event_file.readlines())
+    event_file.close()
+    fieldcfg = raw_input ("Please drag your MSU-1 Field configuration text file into this window: ").strip('\"')
+    field_file = open(fieldcfg)
+    field_names = list(line.rstrip('\n') for line in field_file.readlines())
+    field_file.close()
+    inputFolder = os.path.join(root, "Music")
+    battleFolder = os.path.join(inputFolder, "Battle")
+    charFolder = os.path.join(inputFolder, "Character")
+    fieldFolder = os.path.join(inputFolder, "Field")
+    eventFolder = os.path.join(inputFolder, "Event")
+    bossFolder = os.path.join(inputFolder, "Boss")
+    
+    for root, dirs, files in os.walk(charFolder):
+
+        for name in char_names:
+            # Validation flag
+            validFile = False
+
+            # Validate the file that will be picked
+            while not validFile:
+
+                # Get a random index
+                index = random.choice(range(len(files)))
+
+                # Get the path and file from the picked index
+                path = os.path.join(root, files[index])
+                file = files[index]
+
+
+                # It must be a file and not be already picked
+                if os.path.isfile(path) and file not in copiedFiles:
+                    # File is valid
+                    validFile = True
+
+                    # Copy the name to the new list
+                    copiedFiles.append(file)
+
+                    # Copy the file to the output folder
+                    shutil.copy(path, outputFolder)
+
+                    # Rename the file
+                    os.chdir(outputFolder)
+                    print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                    f = open("Output.txt", "a+")
+                    for i in range(1):                
+                        f.write("Character Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
+                    f.close()
+                    os.rename(file, rom[0]+"-"+name)
+                    msu = open(rom[0]+'.msu', 'w')
+                    os.chdir("..")
+                
+    for root, dirs, files in os.walk(battleFolder):
+
+        for name in battle_names:
+            # Validation flag
+            validFile = False
+
+            # Validate the file that will be picked
+            while not validFile:
+
+                # Get a random index
+                index = random.choice(range(len(files)))
+
+                # Get the path and file from the picked index
+                path = os.path.join(root, files[index])
+                file = files[index]
+
+
+                # It must be a file and not be already picked
+                if os.path.isfile(path) and file not in copiedFiles:
+                    # File is valid
+                    validFile = True
+
+                    # Copy the name to the new list
+                    copiedFiles.append(file)
+
+                    # Copy the file to the output folder
+                    shutil.copy(path, outputFolder)
+
+                    # Rename the file
+                    os.chdir(outputFolder)
+                    print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                    f = open("Output.txt", "a+")
+                    for i in range(1):                
+                        f.write("Battle Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
+                    f.close()
+                    os.rename(file, rom[0]+"-"+name)
+                    msu = open(rom[0]+'.msu', 'w')
+                    os.chdir("..")
+
+    for root, dirs, files in os.walk(fieldFolder):
+
+        for name in field_names:
+            # Validation flag
+            validFile = False
+
+            # Validate the file that will be picked
+            while not validFile:
+
+                # Get a random index
+                index = random.choice(range(len(files)))
+
+                # Get the path and file from the picked index
+                path = os.path.join(root, files[index])
+                file = files[index]
+
+
+                # It must be a file and not be already picked
+                if os.path.isfile(path) and file not in copiedFiles:
+                    # File is valid
+                    validFile = True
+
+                    # Copy the name to the new list
+                    copiedFiles.append(file)
+
+                    # Copy the file to the output folder
+                    shutil.copy(path, outputFolder)
+
+                    # Rename the file
+                    os.chdir(outputFolder)
+                    print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                    f = open("Output.txt", "a+")
+                    for i in range(1):                
+                        f.write("Field Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
+                    f.close()
+                    os.rename(file, rom[0]+"-"+name)
+                    msu = open(rom[0]+'.msu', 'w')
+                    os.chdir("..")
+
+    for root, dirs, files in os.walk(eventFolder):
+
+        for name in event_names:
+            # Validation flag
+            validFile = False
+
+            # Validate the file that will be picked
+            while not validFile:
+
+                # Get a random index
+                index = random.choice(range(len(files)))
+
+                # Get the path and file from the picked index
+                path = os.path.join(root, files[index])
+                file = files[index]
+
+
+                # It must be a file and not be already picked
+                if os.path.isfile(path) and file not in copiedFiles:
+                    # File is valid
+                    validFile = True
+
+                    # Copy the name to the new list
+                    copiedFiles.append(file)
+
+                    # Copy the file to the output folder
+                    shutil.copy(path, outputFolder)
+
+                    # Rename the file
+                    os.chdir(outputFolder)
+                    print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                    f = open("Output.txt", "a+")
+                    for i in range(1):                
+                        f.write("Event Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
+                    f.close()
+                    os.rename(file, rom[0]+"-"+name)
+                    msu = open(rom[0]+'.msu', 'w')
+                    os.chdir("..")
+
+    for root, dirs, files in os.walk(bossFolder):
+
+        for name in boss_names:
+            # Validation flag
+            validFile = False
+
+            # Validate the file that will be picked
+            while not validFile:
+
+                # Get a random index
+                index = random.choice(range(len(files)))
+
+                # Get the path and file from the picked index
+                path = os.path.join(root, files[index])
+                file = files[index]
+
+
+                # It must be a file and not be already picked
+                if os.path.isfile(path) and file not in copiedFiles:
+                    # File is valid
+                    validFile = True
+
+                    # Copy the name to the new list
+                    copiedFiles.append(file)
+
+                    # Copy the file to the output folder
+                    shutil.copy(path, outputFolder)
+
+                    # Rename the file
+                    os.chdir(outputFolder)
+                    print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                    f = open("Output.txt", "a+")
+                    for i in range(1):                
+                        f.write("Boss Music - "+rom[0]+"-"+name + " is " + file + "\r\n")
+                    f.close()
+                    os.rename(file, rom[0]+"-"+name)
+                    msu = open(rom[0]+'.msu', 'w')
+                    os.chdir("..")
 
 # Read the files in the directory
-for root, dirs, files in os.walk(inputFolder):
+else:
+    if rType == 2:
+        musiccfg = raw_input ("Please drag your MSU-1 configuration text file into this window: ").strip('\"')
+        names_file = open(musiccfg)
+        names = list(line.rstrip('\n') for line in names_file.readlines())
+        names_file.close()
+        for root, subdirs, files in os.walk("Music"):
 
-    for name in names:
-        # Validation flag
-        validFile = False
+            for name in names:
+                # Validation flag
+                validFile = False
 
-        # Validate the file that will be picked
-        while not validFile:
+                # Validate the file that will be picked
+                while not validFile:
 
-            # Get a random index
-            index = random.choice(range(len(files)))
+                    # Get a random index
+                    index = random.choice(range(len(files)))
 
-            # Get the path and file from the picked index
-            path = os.path.join(root, files[index])
-            file = files[index]
+                    # Get the path and file from the picked index
+                    path = os.path.join(root, files[index])
+                    file = files[index]
 
 
-            # It must be a file and not be already picked
-            if os.path.isfile(path) and file not in copiedFiles:
-                # File is valid
-                validFile = True
+                    # It must be a file and not be already picked
+                    if os.path.isfile(path) and file not in copiedFiles:
+                        # File is valid
+                        validFile = True
+    
+                        # Copy the name to the new list
+                        copiedFiles.append(file)
 
-                # Copy the name to the new list
-                copiedFiles.append(file)
+                        # Copy the file to the output folder
+                        shutil.copy(path, outputFolder)
 
-                # Copy the file to the output folder
-                shutil.copy(path, outputFolder)
+                        # Rename the file
+                        os.chdir(outputFolder)
+                        print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
+                        f = open("Output.txt", "a+")
+                        for i in range(1):                
+                            f.write(rom[0]+"-"+name + " is " + file + "\r\n")
+                        f.close()
+                        os.rename(file, rom[0]+"-"+name)
+                        msu = open(rom[0]+'.msu', 'w')
+                        os.chdir("..")
 
-                # Rename the file
-                os.chdir(outputFolder)
-                print "Copied " + file + ", renamed it to " + rom[0]+"-"+name + "!"
-                f = open("Output.txt", "a+")
-                for i in range(1):                
-                    f.write(rom[0]+"-"+name + " is " + file + "\r\n")
-                f.close()
-                os.rename(file, rom[0]+"-"+name)
-                msu = open(rom[0]+'.msu', 'w')
-                os.chdir("..")
 
-shutil.copy(rompath, outputFolder)
 
 
