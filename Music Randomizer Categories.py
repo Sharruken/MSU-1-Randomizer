@@ -5,12 +5,12 @@ import shutil
 import ntpath
 
 # Reads the Filenames list
-battlecfg = raw_input ("Please drag your MSU-1 Battle configuration text file into this window: ").strip('\"')
-charcfg = raw_input ("Please drag your MSU-1 Character configuration text file into this window: ").strip('\"')
-fieldcfg = raw_input ("Please drag your MSU-1 Field configuration text file into this window: ").strip('\"')
-eventcfg = raw_input ("Please drag your MSU-1 Event configuration text file into this window: ").strip('\"')
-bosscfg = raw_input ("Please drag your MSU-1 Boss configuration text file into this window: ").strip('\"')
 rompath = raw_input ("Please drag your ROM into this window: ").strip('\"')
+battlecfg = raw_input ("Please drag your MSU-1 Battle configuration text file into this window: ").strip('\"')
+bosscfg = raw_input ("Please drag your MSU-1 Boss configuration text file into this window: ").strip('\"')
+charcfg = raw_input ("Please drag your MSU-1 Character configuration text file into this window: ").strip('\"')
+eventcfg = raw_input ("Please drag your MSU-1 Event configuration text file into this window: ").strip('\"')
+fieldcfg = raw_input ("Please drag your MSU-1 Field configuration text file into this window: ").strip('\"')
 rombase = ntpath.basename(rompath)
 rom = os.path.splitext(rombase)
 battle_file = open(battlecfg)
