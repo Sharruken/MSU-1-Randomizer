@@ -3,15 +3,12 @@ import os
 import random
 import shutil
 import ntpath
+import subprocess
 
 # Reads the Filenames list
-rompath = raw_input ("Please drag your ROM into this window: ").strip('\"')
+rompath = raw_input ("Please drag your ROM into this window:\n").strip('\"')
 rombase = ntpath.basename(rompath)
 rom = os.path.splitext(rombase)
-rType = input ("Please select what type of Randomizer you would like:\n"
-                   "1. Categorized\n"
-                   "2. Chaos\n")
-
 
 # Set the root path
 root = os.curdir
@@ -20,46 +17,51 @@ root = os.curdir
 inputFolder = os.path.join(root, "Music")
 
 # Path to copy files to
-outputFolder = os.path.join(root, "Output")
+outputFolder = os.path.join(root, rom[0])
+print "Outputting to: " + outputFolder.strip(".")
 
 # Store the copied file names here
 copiedFiles = []
+rType = input ("Please select what type of Randomizer you would like:\n"
+                   "1. Categorized\n"
+                   "2. Chaos\n")
+catInput = "Music Categories"
 
 # Clear the output folder first
 for dir in os.listdir(os.curdir):
     if os.path.exists(outputFolder):
         shutil.rmtree(outputFolder)
 #Create the output folder
-os.makedirs("Output")
+os.makedirs(outputFolder)
 shutil.copy(rompath, outputFolder)
 
 if rType == 1:
-    battlecfg = raw_input ("Please drag your MSU-1 Battle configuration text file into this window: ").strip('\"')
+    battlecfg = raw_input ("Please drag your MSU-1 Battle configuration text file into this window:\n").strip('\"')
     battle_file = open(battlecfg)
     battle_names = list(line.rstrip('\n') for line in battle_file.readlines())
     battle_file.close()
-    bosscfg = raw_input ("Please drag your MSU-1 Boss configuration text file into this window: ").strip('\"')
+    bosscfg = raw_input ("Please drag your MSU-1 Boss configuration text file into this window:\n").strip('\"')
     boss_file = open(bosscfg)
     boss_names = list(line.rstrip('\n') for line in boss_file.readlines())
     boss_file.close()
-    charcfg = raw_input ("Please drag your MSU-1 Character configuration text file into this window: ").strip('\"')
+    charcfg = raw_input ("Please drag your MSU-1 Character configuration text file into this window:\n").strip('\"')
     char_file = open(charcfg)
     char_names = list(line.rstrip('\n') for line in char_file.readlines())
     char_file.close()
-    eventcfg = raw_input ("Please drag your MSU-1 Event configuration text file into this window: ").strip('\"')
+    eventcfg = raw_input ("Please drag your MSU-1 Event configuration text file into this window:\n").strip('\"')
     event_file = open(eventcfg)
     event_names = list(line.rstrip('\n') for line in event_file.readlines())
     event_file.close()
-    fieldcfg = raw_input ("Please drag your MSU-1 Field configuration text file into this window: ").strip('\"')
+    fieldcfg = raw_input ("Please drag your MSU-1 Field configuration text file into this window:\n").strip('\"')
     field_file = open(fieldcfg)
     field_names = list(line.rstrip('\n') for line in field_file.readlines())
     field_file.close()
     inputFolder = os.path.join(root, "Music")
-    battleFolder = os.path.join(inputFolder, "Battle")
-    charFolder = os.path.join(inputFolder, "Character")
-    fieldFolder = os.path.join(inputFolder, "Field")
-    eventFolder = os.path.join(inputFolder, "Event")
-    bossFolder = os.path.join(inputFolder, "Boss")
+    battleFolder = os.path.join(catInput, "Battle")
+    charFolder = os.path.join(catInput, "Character")
+    fieldFolder = os.path.join(catInput, "Field")
+    eventFolder = os.path.join(catInput, "Event")
+    bossFolder = os.path.join(catInput, "Boss")
     
     for root, dirs, files in os.walk(charFolder):
 
@@ -259,7 +261,7 @@ if rType == 1:
 # Read the files in the directory
 else:
     if rType == 2:
-        musiccfg = raw_input ("Please drag your MSU-1 configuration text file into this window: ").strip('\"')
+        musiccfg = raw_input ("Please drag your MSU-1 configuration text file into this window:\n").strip('\"')
         names_file = open(musiccfg)
         names = list(line.rstrip('\n') for line in names_file.readlines())
         names_file.close()
@@ -302,6 +304,10 @@ else:
                         msu = open(rom[0]+'.msu', 'w')
                         os.chdir("..")
 
+ipsQ = raw_input ("Would you like to apply an IPS patch to your ROM? y/n: ")
 
+if ipsQ == "y":
+    ipsP = raw_input("please drag your IPS patch into this window:\n").strip('\"')
+    subprocess.call(["liteips.exe", "-f", ipsP, outputFolder+"/"+rom[0]+rom[1]])
 
 
