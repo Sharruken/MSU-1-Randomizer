@@ -9,7 +9,7 @@ import subprocess
 rompath = raw_input ("Please drag your ROM into this window:\n").strip('\"')
 rombase = ntpath.basename(rompath)
 rom = os.path.splitext(rombase)
-
+pcmExt = ".pcm"
 # Set the root path
 root = os.curdir
 
@@ -81,7 +81,7 @@ if rType == 1:
 
 
                 # It must be a file and not be already picked
-                if os.path.isfile(path) and file not in copiedFiles:
+                if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                     # File is valid
                     validFile = True
 
@@ -120,7 +120,7 @@ if rType == 1:
 
 
                 # It must be a file and not be already picked
-                if os.path.isfile(path) and file not in copiedFiles:
+                if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                     # File is valid
                     validFile = True
 
@@ -159,7 +159,7 @@ if rType == 1:
 
 
                 # It must be a file and not be already picked
-                if os.path.isfile(path) and file not in copiedFiles:
+                if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                     # File is valid
                     validFile = True
 
@@ -198,7 +198,7 @@ if rType == 1:
 
 
                 # It must be a file and not be already picked
-                if os.path.isfile(path) and file not in copiedFiles:
+                if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                     # File is valid
                     validFile = True
 
@@ -237,7 +237,7 @@ if rType == 1:
 
 
                 # It must be a file and not be already picked
-                if os.path.isfile(path) and file not in copiedFiles:
+                if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                     # File is valid
                     validFile = True
 
@@ -265,7 +265,7 @@ else:
         names_file = open(musiccfg)
         names = list(line.rstrip('\n') for line in names_file.readlines())
         names_file.close()
-        for root, subdirs, files in os.walk("Music"):
+        for root, subdirs, files in os.walk("Music Categories"):
 
             for name in names:
                 # Validation flag
@@ -283,7 +283,7 @@ else:
 
 
                     # It must be a file and not be already picked
-                    if os.path.isfile(path) and file not in copiedFiles:
+                    if os.path.isfile(path) and file not in copiedFiles and file.endswith(pcmExt):
                         # File is valid
                         validFile = True
     
@@ -304,7 +304,7 @@ else:
                         msu = open(rom[0]+'.msu', 'w')
                         os.chdir("..")
 
-ipsQ = raw_input ("Would you like to apply an IPS patch to your ROM? y/n: ")
+ipsQ = raw_input ("\nWould you like to apply an IPS patch to your ROM? y/n: ")
 
 if ipsQ == "y":
     ipsP = raw_input("please drag your IPS patch into this window:\n").strip('\"')
