@@ -306,8 +306,9 @@ else:
 
 ipsQ = raw_input ("\nWould you like to apply an IPS patch to your ROM? y/n: ")
 
-if ipsQ == "y" or "Y":
+if ipsQ == "y" or ipsQ == "Y":
     ipsP = raw_input("please drag your IPS patch into this window:\n").strip('\"')
     subprocess.call(["liteips.exe", "-f", ipsP, outputFolder+"/"+rom[0]+rom[1]])
+scExit = raw_input ("\nPlease press enter to quit.")
 
 
