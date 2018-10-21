@@ -16,4 +16,4 @@ Same as the Chaos mode, but pulls from subdirectories in the Music Categories Fo
 
 # IMPORTANT NOTE
 
-Category will only randomize songs within a specific category. Currently those are hardcoded to be Battle, Event, Field, Character and Boss. You'll need to make a "Music Categories" folder and put your music files into each respective folder. The configuration files define which songs form FFVI vanilla are swapped with the music in each category folder. Make sure there are enough files to populate the text config files you're using, otherwise the process will hang without ever finishing.
+Category will only randomize songs within a specific category. Currently those are hardcoded to be Battle, Event, Field, Character and Boss. You'll need to make a "Music Categories" folder and put your music files into each respective folder. The configuration files define which songs from FFVI vanilla are swapped with the music in each category folder. Make sure there are enough files to populate the text config files you're using, otherwise the process will hang without ever finishing.
