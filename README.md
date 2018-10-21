@@ -13,3 +13,7 @@ This is a randomizer to be used with any and all MSU-1 patched SNES games.
 # Category Usage
 
 Same as the Chaos mode, but pulls from subdirectories in the Music Categories Folder, pulls from Battle, Event, Field, Character and Boss, make sure there are enough files to populate the text config files you're using, otherwise the process will hang without ever finishing.
+
+# IMPORTANT NOTE
+
+Category will only randomize songs within a specific category. Currently those are hardcoded to be Battle, Event, Field, Character and Boss. You'll need to make a "Music Categories" folder and put your music files into each respective folder. The configuration files define which songs form FFVI vanilla are swapped with the music in each category folder. Make sure there are enough files to populate the text config files you're using, otherwise the process will hang without ever finishing.
