@@ -1,7 +1,0 @@
-7.pcm
-11.pcm
-14.pcm
-21.pcm
-22.pcm
-42.pcm
-66.pcm
