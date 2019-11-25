@@ -24,7 +24,7 @@ For the MSU-1 patch, all files are numbered, with the number corresponding to wh
 
 # SONG TRACK NUMBERS AND THEIR CORRESPONDING TRACKS
 
-01 - The Prelude
+01 - The Prelude 
 02 - Opening Part 01 (Title Screen)
 03 - Opening Part 02 (War of the Magi)
 04 - Opening Part 03 (Magitek March)
