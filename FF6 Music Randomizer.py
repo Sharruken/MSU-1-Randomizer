@@ -6,12 +6,19 @@ import ntpath
 import subprocess
 
 # Reads the Filenames list
+root = os.curdir
+CONFIG_FILE = open(root+("/Configs/Final Fantasy VI/CONFIG.txt"))
+CONFIG = list(line.rstrip('\n') for line in CONFIG_FILE.readlines())
+CONFIG_NUM = len(CONFIG)
+print(CONFIG)
+print(CONFIG_NUM)
 rompath = input ("Please drag your ROM into this window:\n").strip('\"')
 rombase = ntpath.basename(rompath)
 rom = os.path.splitext(rombase)
 pcmExt = ".pcm"
 # Set the root path
-root = os.curdir
+
+
 
 # Path to copy files from
 inputFolder = os.path.join(root, "Music")
@@ -86,12 +93,11 @@ def randomize(rand):
         except:
             pass
             
-
-randomize('Battle')
-randomize('Boss')
-randomize('Character')
-randomize('Event')
-randomize('Field')
+for i in range(CONFIG_NUM):
+    try:
+        randomize(CONFIG[i])
+    except FileNotFoundError:
+        pass
 
 ipsQ = input ("\nWould you like to apply an IPS patch to your ROM? y/n: ")
 
