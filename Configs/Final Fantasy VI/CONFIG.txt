@@ -1,0 +1,5 @@
+Battle
+Boss
+Character
+Event
+Field
