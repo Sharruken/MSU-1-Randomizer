@@ -16,7 +16,7 @@ Same as the Chaos mode, but pulls from subdirectories in the Music Categories Fo
 
 # IMPORTANT NOTE
 
-Category will only randomize songs within a specific category. Currently those are hardcoded to be Battle, Event, Field, Character and Boss. You'll need to make a "Music Categories" folder and put your music files into each respective folder. The configuration files define which songs from FFVI vanilla are swapped with the music in each category folder. Make sure there are enough files to populate the text config files you're using, otherwise the process will hang without ever finishing.
+Category will only randomize songs within a specific category. By default, these are Battle, Event, Field, Character and Boss. You'll need to make a "Music Categories" folder and put your music files into each respective folder. The configuration files define which songs from FFVI vanilla are swapped with the music in each category folder.
 
 # SONG NUMBERS AND WHAT THEY MEAN (FOR CUSTOMIZATION)
 
@@ -24,20 +24,20 @@ For the MSU-1 patch, all files are numbered, with the number corresponding to wh
 
 # SONG TRACK NUMBERS AND THEIR CORRESPONDING TRACKS
 
-01 - The Prelude 
-02 - Opening Part 01 (Title Screen)
-03 - Opening Part 02 (War of the Magi)
-04 - Opening Part 03 (Magitek March)
-05 - Awakening
-06 - Terra
-07 - Shadow
-08 - Stragus
-09 - Gau
-10- Edgar & Sabin
-11- Coin Song
-12- Cyan/Cayenne
-13- Locke
-14 - Forever Rachel
+01. - The Prelude 
+02. - Opening Part 01 (Title Screen)
+03. - Opening Part 02 (War of the Magi)
+04. - Opening Part 03 (Magitek March)
+05. - Awakening
+06. - Terra
+07. - Shadow
+08. - Stragus
+09. - Gau
+10.- Edgar & Sabin
+11.- Coin Song
+12.- Cyan/Cayenne
+13.- Locke
+14. - Forever Rachel
 15 - Relm
 16 - Setzer
 17 - Epitaph
