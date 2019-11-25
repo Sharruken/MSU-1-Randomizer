@@ -1,3 +1,7 @@
+# REQUIRES PYTHON 3.X
+
+Unfortunately, at the current moment I'm unable to compile the latest version into an exe, so it will have to be run as a .py with Python 3
+
 # MSU-1-Randomizer
 
 This is a randomizer to be used with any and all MSU-1 patched SNES games.
