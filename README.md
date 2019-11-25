@@ -38,73 +38,73 @@ For the MSU-1 patch, all files are numbered, with the number corresponding to wh
 12.- Cyan/Cayenne
 13.- Locke
 14. - Forever Rachel
-15 - Relm
-16 - Setzer
-17 - Epitaph
-18 - Celes
-19 - Techno de Chocobo
-20 - Decisive Battle
-21 - Johnny C Bad
-22 - Kefka
-23 - Narshe
-24 - Mystic Forest
-25 - Wild West
-26 - Save Them
-27 - The Gestahl Empire
-28 - Troops March On
-29 - Under Martial Law
-30 - Rain Effect
-31 - Metamorphosis
-32 - Train Effect? Mystery Train intro? (Special handling)
-33 - Esper World
-34 - Grand Finale
-35 - Mt Koltz
-36 - Battle
-37 - Unlisted Fanfare
-38 - The Wedding Waltz Part 1
-39 - Aria de Mezzo Carattare
-40 - The Serpent Trench
-41 - Slam Shuffle
-42 Kids Run Through The City Corner
-43 What?/??
-44 Grand Finale 1 (Crowd Roar?) (Possibly special handling?)
-45 Gogo
-46 Returners
-47 Fanfare
-48 - Umaro
-49 - Mog
-50 - The Unforgiven
-51 - The Fierce Battle
-52 - From That Day Forward/The Day After
-53 - Blackjack
-54 - Catastrophe
-55 - The Magic House
-56 - Nighty Night (Inn Sleep Effect.)
-57 - Wind (Wind.)
-58 - Windy Shores (More wind.)
-59 - Dancing Mad Parts 1 through 3 (Special handling)
-60 - Raft effects ()
-61 - Spinach Rag
-62 - Rest in Peace
-63 - Train running ()
-64 - Dream of a train (miscellaneous phantom train scene effects)
-65 - Overture Part 1
-66 - Part 2
-67 - Part 3
-68 - Wedding Waltz Part 2
-69 - Part 3
-70 - Part 4
-71 - Devil's Lab/Magitek Research Facility
-72 - Fire effect
-73 - Machine effect
-74 - Burning house background effects
-75 - New Continent/The Floating Continent
-76 - Searching for Friends
-77 - Fanatics
-78 - Last Dungeon
-79 - Dark World
-80 - Dancing Mad 4.2
-81 - Silence
-82 - Dancing Mad 4.1
-83 - Ending Part 1
-84 - Ending Part 2
+15. - Relm
+16. - Setzer
+17. - Epitaph
+18. - Celes
+19. - Techno de Chocobo
+20. - Decisive Battle
+21. - Johnny C Bad
+22. - Kefka
+23. - Narshe
+24. - Mystic Forest
+25. - Wild West
+26. - Save Them
+27. - The Gestahl Empire
+28. - Troops March On
+29. - Under Martial Law
+30. - Rain Effect
+31. - Metamorphosis
+32. - Train Effect? Mystery Train intro? (Special handling)
+33. - Esper World
+34. - Grand Finale
+35. - Mt Koltz
+36. - Battle
+37. - Unlisted Fanfare
+38. - The Wedding Waltz Part 1
+39. - Aria de Mezzo Carattare
+40. - The Serpent Trench
+41. - Slam Shuffle
+42. Kids Run Through The City Corner
+43. What?/??
+44. Grand Finale 1 (Crowd Roar?) (Possibly special handling?)
+45. Gogo
+46. Returners
+47. Fanfare
+48. - Umaro
+49. - Mog
+50. - The Unforgiven
+51. - The Fierce Battle
+52. - From That Day Forward/The Day After
+53. - Blackjack
+54. - Catastrophe
+55. - The Magic House
+56. - Nighty Night (Inn Sleep Effect.)
+57. - Wind (Wind.)
+58. - Windy Shores (More wind.)
+59. - Dancing Mad Parts 1 through 3 (Special handling)
+60. - Raft effects ()
+61. - Spinach Rag
+62. - Rest in Peace
+63. - Train running ()
+64. - Dream of a train (miscellaneous phantom train scene effects)
+65. - Overture Part 1
+66. - Part 2
+67. - Part 3
+68. - Wedding Waltz Part 2
+69. - Part 3
+70. - Part 4
+71. - Devil's Lab/Magitek Research Facility
+72. - Fire effect
+73. - Machine effect
+74. - Burning house background effects
+75. - New Continent/The Floating Continent
+76. - Searching for Friends
+77. - Fanatics
+78. - Last Dungeon
+79. - Dark World
+80. - Dancing Mad 4.2
+81. - Silence
+82. - Dancing Mad 4.1
+83. - Ending Part 1
+84. - Ending Part 2
