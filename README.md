@@ -37,10 +37,10 @@ For the MSU-1 patch, all files are numbered, with the number corresponding to wh
 07. - Shadow
 08. - Stragus
 09. - Gau
-10.- Edgar & Sabin
-11.- Coin Song
-12.- Cyan/Cayenne
-13.- Locke
+10. - Edgar & Sabin
+11. - Coin Song
+12. - Cyan/Cayenne
+13. - Locke
 14. - Forever Rachel
 15. - Relm
 16. - Setzer
