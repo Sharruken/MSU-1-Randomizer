@@ -69,12 +69,12 @@ For the MSU-1 patch, all files are numbered, with the number corresponding to wh
 39. - Aria de Mezzo Carattare
 40. - The Serpent Trench
 41. - Slam Shuffle
-42. Kids Run Through The City Corner
-43. What?/??
-44. Grand Finale 1 (Crowd Roar?) (Possibly special handling?)
-45. Gogo
-46. Returners
-47. Fanfare
+42. - Kids Run Through The City Corner
+43. - What?/??
+44. - Grand Finale 1 (Crowd Roar?) (Possibly special handling?)
+45. - Gogo
+46. - Returners
+47. - Fanfare
 48. - Umaro
 49. - Mog
 50. - The Unforgiven
